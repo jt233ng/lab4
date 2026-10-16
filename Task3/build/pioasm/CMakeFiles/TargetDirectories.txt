@@ -1,0 +1,3 @@
+/home/student/1dt301/lab4/Task3/build/pioasm/CMakeFiles/rebuild_cache.dir
+/home/student/1dt301/lab4/Task3/build/pioasm/CMakeFiles/edit_cache.dir
+/home/student/1dt301/lab4/Task3/build/pioasm/CMakeFiles/pioasm.dir
