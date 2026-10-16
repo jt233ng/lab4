@@ -20,7 +20,10 @@ int main(void)
 
     gpio_init(BUTTON_ON);
     *(SIO + 0x018 / 4) = 1ul << LED_PIN1; // macht LED aus
+    gpio_set_dir(BUTTON_ON, GPIO_IN);
     gpio_pull_up(BUTTON_ON);
+    
+
     *(SIO + 0x018 / 4) = 1ul << LED_PIN6;
     gpio_init(BUTTON_OFF);
     gpio_set_dir(BUTTON_OFF, GPIO_IN);
@@ -41,7 +44,7 @@ int main(void)
         {
             // GPIO_OUT_CLR: LED ausschalten
             *(SIO + 0x018 / 4) = 1ul << LED_PIN1; //18 null setzen
-            *(SIO + 0x014 / 4) = 1ul << LED_PIN6;
+            *(SIO + 0x018 / 4) = 1ul << LED_PIN6;
         }
     }
 }
